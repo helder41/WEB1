@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndicaFilmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Vou separar as sessões por comentários para facilitar para mim e para você, professor.-->
+    
+    <!-- =============== CABEÇALHO =============== -->
+     <header>
+        <h1>IndicaFilmes</h1>
+        <h2>Obras cinematográficas imperdíveis!</h2>
+     
+        <!-- ========= Menu principal para navegação ========= -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#destaque">Destaque</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#lancamentos">Lançamentos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+     </header>
+
+     <!-- ========= DESTAQUE DA SEMANA ========= -->
+     <section id="destaque">
+        <h2>Destaque da semana</h2>
+        <div class="card-destaque">
+            <img src="img/destaque.jpg" alt="Pôster do filme em destaque">
+            <h3>A Odisseia</h3>
+            <p>Uma das histórias mais antigas da literatura ocidental ganha uma adaptação cinematográfica pelas mãos do cineasta Christopher Nolan. A Odisseia é um poema épico atribuído a Homero que acompanha as aventuras do herói grego Odisseu (Matt Damon) em sua volta para casa após a Guerra de Troia. O guerreiro enfrenta criaturas míticas e deuses em sua jornada épica de retorno onde sua esposa Penélope (Anne Hathaway) o aguarda. O rei de Ítaca descreve sua trajetória esbarrando com seres como o Ciclope Polifemo, as sereias e a feiticeira/deusa Circe.</p>
+            <ul class="generos">
+                <li>Ação</li>
+                <li>Aventura</li>
+                <li>Fantasia</li>
+            </ul>
+        </div>
+     </section>
+
+     <!-- ========= GRADE DE FILMES ========= -->
+      <section id="catalogo">
+        <h2>Catálogo</h2>
+        <div class="grade">
+           <!--Durante a checagem final, lembrei de adicionar o blank nos links para que uma nova aba seja aberta-->
+            <div class="card">
+                <span class="selo">NOVO</span>
+                <img src="img/poster1.jpg" alt="Pôster do filme Cara-de-Barro">
+                <h3><a href="https://www.imdb.com/pt/title/tt34890576/" target="_blank">Cara-de-Barro</a></h3>
+                <p>2026 · Terror </p>
+            </div>
+            <div class="card">
+                <!--Deixarei o selo dos filmes 2 e 3 como escondido e o do filme 4 em diante como oculto, somente para mostrar a diferença.-->
+                <span class="selo escondido">NOVO</span>
+                <img src="img/poster2.jpg" alt="Pôster do filme A Hora do Mal">
+                <h3><a href="https://www.imdb.com/pt/title/tt26581740/" target="_blank">A Hora do Mal</a></h3>
+                <p>2025 · Terror </p>
+            </div>
+            <div class="card">
+                <span class="selo escondido">NOVO</span>
+                <img src="img/poster3.jpg" alt="Pôster do filme Superman">
+                <h3><a href="https://www.imdb.com/pt/title/tt5950044/" target="_blank">Superman</a></h3>
+                <p>2025 · Ação e aventura </p>
+            </div>
+            <div class="card">
+                <span class="selo oculto">NOVO</span>
+                <img src="img/poster4.jpg" alt="Pôster do filme Faça Ela Voltar">
+                <h3><a href="https://www.imdb.com/pt/title/tt32246771/" target="_blank">Faça Ela Voltar</a></h3>
+                <p>2025 · Terror </p>
+            </div>
+            <div class="card">
+                <span class="selo oculto">NOVO</span>
+                <img src="img/poster5.jpg" alt="Pôster do filme Oppenheimer">
+                <h3><a href="https://www.imdb.com/pt/title/tt15398776/" target="_blank">Oppenheimer</a></h3>
+                <p>2023 · Cinebiografia </p>
+            </div>
+            <div class="card">
+                <span class="selo oculto">NOVO</span>
+                <img src="img/poster6.jpg" alt="Pôster do filme Coringa">
+                <h3><a href="https://www.imdb.com/pt/title/tt7286456/" target="_blank">Coringa</a></h3>
+                <p>2019 · Drama psicológico </p>
+            </div>
+        </div>
+      </section>
+      <!-- ========= TABELA ========= -->
+       <section id="lancamentos">
+            <h2>Lançamentos e Prêmios</h2>
+            <table>
+                <tr>
+                    <th>Filme</th>
+                    <th>Ano</th>
+                    <th>Nota</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Verity</td>
+                    <td>2026</td>
+                    <td>6,0</td>
+                    <td>Em cartaz</td>
+                </tr>
+                <tr>
+                    <td>Resident Evil</td>
+                    <td>2026</td>
+                    <td>7,6</td>
+                    <td>Em cartaz</td>
+                </tr>
+                <tr>
+                    <td>Outra Mamãe</td>
+                    <td>2026</td>
+                    <td>6,0</td>
+                    <td>Em cartaz</td>
+                </tr>
+                <tr>
+                    <td>Street Fighter</td>
+                    <td>2026</td>
+                    <td>?,?</td>
+                    <td>Em breve</td>
+                </tr>
+                <tr>
+                    <td>Dentro da Baleia</td>
+                    <td>2026</td>
+                    <td>?,?</td>
+                    <td>Em breve</td>
+                </tr>
+                <tr>
+                    <td>Godzilla Minus Zero</td>
+                    <td>2026</td>
+                    <td>8,4</td>
+                    <td>Em breve</td>
+                </tr>
+            </table>
+       </section>
+
+       <!-- ========= SOBRE / CONTATO ========= -->
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>
+                <img src="img/perfil.jpg" alt="Foto do autor" class="foto-sobre">
+                Olá! Meu nome é Paulo Helder, sou um estudante de Engenharia de Software na UNEB. Este catálogo nasceu de uma avaliação sobre CSS e, por esse motivo, você está lendo essa mensagem. Aproveite! <br> <br>
+                O site possui estruturas relativamente simples, pois meu conhecimento nas linguagens é limitado, porém é com a prática que melhoramos. Apesar de simples, o layout está agradável e todos os requisitos foram atendidos. Agradeço a atenção.
+            </p>
+            <div class="redes">
+                <a href="https://github.com/helder41" target="_blank">GitHub</a> <br>
+                <a href="https://www.instagram.com/paulohelderdss/" target="_blank">Instagram</a> <br>
+                <a href="https://www.linkedin.com/in/paulohelderdss" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>Paulo Helder · Desenvolvimento Web I · UNEB</p>
+        </footer>
+</body>
+</html>

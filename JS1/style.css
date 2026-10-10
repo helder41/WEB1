@@ -1,0 +1,225 @@
+/* ========= GERAL ========= */
+body {
+    margin: 0;
+    background-color: #141414;
+    color: #e5e5e5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+section {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+section h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #e50914;
+    padding-bottom: 0.3em;
+}
+
+/* ========= CABEÇALHO =========*/
+header {
+    background-color: #b91717;
+    background-image: url(img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    color: rgb(229, 9, 20);
+    font-size: 6em;
+    text-shadow: 3px 3px 6px rgba(94, 109, 95, 0.904);
+    margin-bottom: 0;
+}
+
+header h2 {
+    font-style: italic;
+    font-weight: normal;
+    color: white;
+}
+
+/* ========= MENU =========*/
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.menu a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: rgb(229, 9, 20);
+    text-decoration: underline;
+}
+
+/* ========= DESTAQUE DA SEMANA ========= */
+.card-destaque {
+    background-color: #1f1f1f;
+    border: 2px solid #e50914;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: center;
+}
+/*Precisei estudar um pouco mais, pois quando eu alinhava o texto para ajeitar a imagem, o gênero vinha para o meio e as bolinhas continuavam na esquerda.*/
+.card-destaque img {
+    width: 450px;
+    float: none;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.card-destaque .generos {
+    list-style-position: inside;
+    padding: 0;
+}
+
+.card-destaque h3 {
+    font-size: 1.6em;
+    margin-top: 0;
+}
+
+/* === lista de gêneros === */
+.generos {
+    list-style-type: lower-greek;
+}
+
+.generos li {
+    color: #ffcc00;
+}
+
+/* ========= GRADE DE FILMES ========= */
+/* Encontrei essa parte lendo o material, não havia descoberto no vídeo!*/
+.grade {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    background-color: #2a2a2a;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.card h3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.card h3 a:hover {
+    color: #e50914;
+}
+.card p {
+    color: #aaaaaa;
+    font-size: 0.9em;
+}
+
+/* ========= TABELA ========= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px 15px;
+    border: 1px solid #444444;
+    text-align: left;
+}
+
+th {
+    background-color: #e50914;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #222222;
+}
+
+tr:hover {
+    background-color: #333333;
+}
+
+/* ========= SOBRE / CONTATO ========= */
+.foto-sobre {
+    float: right;
+    width: 120px;
+    border-radius: 50%;
+    margin: 0 0 10px 15px;
+}
+
+#sobre p {
+    text-align: justify;
+}
+
+.redes {
+    clear: both;
+    margin-top: 20px;
+}
+
+.redes a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: 2px solid #e50914;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.redes a:hover,
+.redes a:focus {
+    background-color: #e50914;
+    color: black;
+}
+
+/* === Rodapé === */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000000;
+    color: #888888;
+}
+
+/* ========= DISPLAY E VISIBILITY ========= */
+.selo {
+    display: block;
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.escondido {
+    visibility: hidden;
+}
+/*aplicando o none para não ocupar espaço*/
+.oculto {
+    display: none;
+}
