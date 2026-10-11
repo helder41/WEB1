@@ -28,7 +28,7 @@ function mostrarFilmes(lista) {
         <div class="card">
             <span class="${classeSelo}">⭐ Recomendado</span>
             <img src="${filme.poster}" alt="Poster do filme ${filme.titulo}">
-            h3>${filme.titulo}</h3>
+            <h3>${filme.titulo}</h3>
               <p>${filme.ano} · ${filme.genero}</p>
                 <p>Nota: ${filme.nota}</p>
                 <button onclick="favoritar(${i})">♥ Favoritar</button>
@@ -72,7 +72,7 @@ filtroGenero.addEventListener("change", function() {
 
 // ========= INVERTER ORDEM =========
 let botaoInverter = document.getElementById("btn-inverter");
-btnInverter.addEventListener("click", function() {
+botaoInverter.addEventListener("click", function() {
     filmes.reverse();
     campoBusca.value = "";
     filtroGenero.value = "Todos";
@@ -124,4 +124,4 @@ let favoritos = [];
 
 // ========= QUANDO CARREGAR A PÁGINA =========
 mostrarFilmes(filmes);  
-mostraraFavoritos();
+mostrarFavoritos();
