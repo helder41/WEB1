@@ -53,5 +53,22 @@ campoBusca.addEventListener("input", function() {
     mostrarFilmes(encontrados);
 });
 
+// ========= FILTRO POR GÊNERO =========
+let filtroGenero = document.getElementById("filtro-genero");
+filtroGenero.addEventListener("change", function() {
+    let generoEscolhido = filtroGenero.value;
+    if (generoEscolhido === "Todos") {
+        mostrarFilmes(filmes);
+    } else {
+        let filtrados = [];
+        for (let filme of filmes) {
+            if (filme.genero === generoEscolhido) {
+                filtrados.push(filme);
+            }
+        }
+        mostrarFilmes(filtrados);
+    }
+});
+
 // ========= QUANDO CARREGAR A PÁGINA =========
 mostrarFilmes(filmes);  
