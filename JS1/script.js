@@ -40,5 +40,18 @@ function mostrarFilmes(lista) {
     contador.innerText = lista.length;
 }
 
+// ========= BUSCA POR TÍTULO =========
+let campoBusca = document.getElementById("busca");
+campoBusca.addEventListener("input", function() {
+    let texto = campoBusca.value.toLowerCase();
+    let encontrados = [];
+    for (let filme of filmes) {
+        if (filme.titulo.toLowerCase().includes(texto)) {
+            encontrados.push(filme);
+        }
+    }
+    mostrarFilmes(encontrados);
+});
+
 // ========= QUANDO CARREGAR A PÁGINA =========
 mostrarFilmes(filmes);  

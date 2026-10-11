@@ -223,3 +223,28 @@ footer {
 .oculto {
     display: none;
 }
+
+/* ========= CONTROLES (JS1)) ========= */
+.controles {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controles input,
+.controles select,
+.controles button,
+.card button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    background-color: #1f1f1f;
+    color: white;
+    font-size: 1em;
+}
+
+.controles button:hover,
+.card button:hover {
+    background-color: #e50914;
+    cursor: pointer;
+}
