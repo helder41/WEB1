@@ -70,5 +70,14 @@ filtroGenero.addEventListener("change", function() {
     }
 });
 
+// ========= INVERTER ORDEM =========
+let botaoInverter = document.getElementById("btn-inverter");
+btnInverter.addEventListener("click", function() {
+    filmes.reverse();
+    campoBusca.value = "";
+    filtroGenero.value = "Todos";
+    mostrarFilmes(filmes);
+});
+
 // ========= QUANDO CARREGAR A PÁGINA =========
 mostrarFilmes(filmes);  
