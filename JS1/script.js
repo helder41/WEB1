@@ -79,5 +79,36 @@ btnInverter.addEventListener("click", function() {
     mostrarFilmes(filmes);
 });
 
+// ========= FAVORITOS =========
+let favoritos = [];
+    function favoritar(indice) {
+        let titulo = filmes[indice].titulo;
+        if (!favoritos.includes(titulo)) {
+            favoritos.push(titulo);
+        }
+        mostrarFavoritos();
+    }
+    function mostrarFavoritos() {
+        let lista = document.getElementById("lista-favoritos");
+        let html = "";
+        for (let titulo of favoritos) {
+            html += "<li>" + titulo + "</li>";
+        }
+
+        if (favoritos.length === 0) {
+            html = "<li>Nenhum filme favoritado.</li>";
+        }
+
+        lista.innerHTML = html;
+        document.getElementById("contador-favoritos").innerText = favoritos.length;
+    }
+
+    let botaoLimpar = document.getElementById("btn-limpar");
+    botaoLimpar.addEventListener("click", function() {
+        favoritos = [];
+        mostrarFavoritos();
+    });
+
 // ========= QUANDO CARREGAR A PÁGINA =========
 mostrarFilmes(filmes);  
+mostraraFavoritos();
