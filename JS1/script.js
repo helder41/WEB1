@@ -109,6 +109,19 @@ let favoritos = [];
         mostrarFavoritos();
     });
 
+    // ========= INTERAÇÃO COM O MOUSE =========
+
+    let tituloCatalogo = document.getElementById("titulo-catalogo");
+    tituloCatalogo.addEventListener("mouseenter", function() {
+        tituloCatalogo.style.color = "#ffcc00";
+        tituloCatalogo.backgroundColor = "#333333";
+    });
+
+    tituloCatalogo.addEventListener("mouseout", function() {
+        tituloCatalogo.style.color = "";
+        tituloCatalogo.backgroundColor = "";
+    });
+
 // ========= QUANDO CARREGAR A PÁGINA =========
 mostrarFilmes(filmes);  
 mostraraFavoritos();
