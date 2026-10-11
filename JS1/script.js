@@ -42,7 +42,7 @@ function mostrarFilmes(lista) {
 
 // ========= BUSCA POR TÍTULO =========
 let campoBusca = document.getElementById("busca");
-campoBusca.addEventListener("input", function() {
+campoBusca.addEventListener("input", function () {
     let texto = campoBusca.value.toLowerCase();
     let encontrados = [];
     for (let filme of filmes) {
@@ -55,7 +55,7 @@ campoBusca.addEventListener("input", function() {
 
 // ========= FILTRO POR GÊNERO =========
 let filtroGenero = document.getElementById("filtro-genero");
-filtroGenero.addEventListener("change", function() {
+filtroGenero.addEventListener("change", function () {
     let generoEscolhido = filtroGenero.value;
     if (generoEscolhido === "Todos") {
         mostrarFilmes(filmes);
@@ -72,7 +72,7 @@ filtroGenero.addEventListener("change", function() {
 
 // ========= INVERTER ORDEM =========
 let botaoInverter = document.getElementById("btn-inverter");
-botaoInverter.addEventListener("click", function() {
+botaoInverter.addEventListener("click", function () {
     filmes.reverse();
     campoBusca.value = "";
     filtroGenero.value = "Todos";
@@ -81,47 +81,47 @@ botaoInverter.addEventListener("click", function() {
 
 // ========= FAVORITOS =========
 let favoritos = [];
-    function favoritar(indice) {
-        let titulo = filmes[indice].titulo;
-        if (!favoritos.includes(titulo)) {
-            favoritos.push(titulo);
-        }
-        mostrarFavoritos();
+function favoritar(indice) {
+    let titulo = filmes[indice].titulo;
+    if (!favoritos.includes(titulo)) {
+        favoritos.push(titulo);
     }
-    function mostrarFavoritos() {
-        let lista = document.getElementById("lista-favoritos");
-        let html = "";
-        for (let titulo of favoritos) {
-            html += "<li>" + titulo + "</li>";
-        }
-
-        if (favoritos.length === 0) {
-            html = "<li>Nenhum filme favoritado.</li>";
-        }
-
-        lista.innerHTML = html;
-        document.getElementById("contador-favoritos").innerText = favoritos.length;
+    mostrarFavoritos();
+}
+function mostrarFavoritos() {
+    let lista = document.getElementById("lista-favoritos");
+    let html = "";
+    for (let titulo of favoritos) {
+        html += "<li>" + titulo + "</li>";
     }
 
-    let botaoLimpar = document.getElementById("btn-limpar");
-    botaoLimpar.addEventListener("click", function() {
-        favoritos = [];
-        mostrarFavoritos();
-    });
+    if (favoritos.length === 0) {
+        html = "<li>Nenhum filme favoritado.</li>";
+    }
 
-    // ========= INTERAÇÃO COM O MOUSE =========
+    lista.innerHTML = html;
+    document.getElementById("contador-favoritos").innerText = favoritos.length;
+}
 
-    let tituloCatalogo = document.getElementById("titulo-catalogo");
-    tituloCatalogo.addEventListener("mouseenter", function() {
-        tituloCatalogo.style.color = "#ffcc00";
-        tituloCatalogo.backgroundColor = "#333333";
-    });
+let botaoLimpar = document.getElementById("btn-limpar");
+botaoLimpar.addEventListener("click", function () {
+    favoritos = [];
+    mostrarFavoritos();
+});
 
-    tituloCatalogo.addEventListener("mouseout", function() {
-        tituloCatalogo.style.color = "";
-        tituloCatalogo.backgroundColor = "";
-    });
+// ========= INTERAÇÃO COM O MOUSE =========
+
+let tituloCatalogo = document.getElementById("titulo-catalogo");
+tituloCatalogo.addEventListener("mouseenter", function () {
+    tituloCatalogo.style.color = "#ffcc00";
+    tituloCatalogo.backgroundColor = "#333333";
+});
+
+tituloCatalogo.addEventListener("mouseout", function () {
+    tituloCatalogo.style.color = "";
+    tituloCatalogo.backgroundColor = "";
+});
 
 // ========= QUANDO CARREGAR A PÁGINA =========
-mostrarFilmes(filmes);  
+mostrarFilmes(filmes);
 mostrarFavoritos();

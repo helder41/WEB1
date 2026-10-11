@@ -75,6 +75,7 @@ header h2 {
     max-width: 700px;
     text-align: center;
 }
+
 /*Precisei estudar um pouco mais, pois quando eu alinhava o texto para ajeitar a imagem, o gênero vinha para o meio e as bolinhas continuavam na esquerda.*/
 .card-destaque img {
     width: 450px;
@@ -82,6 +83,7 @@ header h2 {
     margin: 0 auto;
     border-radius: 10px;
 }
+
 .card-destaque .generos {
     list-style-position: inside;
     padding: 0;
@@ -134,6 +136,7 @@ header h2 {
 .card h3 a:hover {
     color: #e50914;
 }
+
 .card p {
     color: #aaaaaa;
     font-size: 0.9em;
@@ -145,7 +148,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     padding: 10px 15px;
     border: 1px solid #444444;
     text-align: left;
@@ -219,6 +223,7 @@ footer {
 .escondido {
     visibility: hidden;
 }
+
 /*aplicando o none para não ocupar espaço*/
 .oculto {
     display: none;
